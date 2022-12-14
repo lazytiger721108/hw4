@@ -1,591 +1,513 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
+
 <head>
-    <title>Interactive Design</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta charset="utf-8"/>
-    <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
-    <link href="css/style.css" media="all" rel="stylesheet" type="text/css">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Amaranth:400,400i,700,700i" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Development</title>
+
 </head>
-<body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-2" id="spy">
-            <div class="header-agile">
-                <h1>
-                    <a class="navbar-brand" href="javascript:void(0)">
-                        Iterative <br>
-                        Design
-                    </a>
-                </h1>
-            </div>
-            <ul class="nav nav-pills flex-column mt-lg-5">
-                <li class="nav-item"><a class="nav-link active" href="#Goal">Goal</a></li>
-                <li class="nav-item"><a class="nav-link" href="#Problem">Problem & Research</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Design Iterations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#User">User Testing</a></li>
-                <li class="nav-item"><a class="nav-link" href="#explore">Remote User Testing Service</a></li>
-                <li class="nav-item"><a class="nav-link" href="#Conclusion">Conclusion</a></li>
-            </ul>
+<style>
+    body,
+    html {
+        margin: 0px;
+        background-color: #54a5b6;
+    }
+
+    .block1 {
+        background-color: #000;
+        margin: 20px;
+        border-radius: 10px;
+        padding: 20px;
+        color: #fff;
+    }
+
+    .sidebar {
+        background-color: #24252d;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        color: #fff;
+        width: 200px;
+        left: 0px;
+        z-index: 10;
+    }
+
+    .sidebar .menu {
+        padding: 20px 10px;
+    }
+
+    .sidebar .menu a {
+        color: #fff;
+        text-decoration: none;
+
+    }
+
+    .caption {
+        color: #fff;
+        font-size: 22pt;
+        text-align: center;
+        padding: 20px;
+        border: 1px solid #fff;
+        width: 46%;
+        margin: 0 auto;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .r-item {
+        flex: 1;
+        background-color: #072833;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+    }
+
+    .footer {
+        width: 100%;
+        background-color: #076787;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        color: #fff;
+        margin-top: 40px;
+    }
+
+    table th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #aaa;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    tbody tr:nth-of-type(odd) {
+        background-color: rgba(0, 0, 0, .05);
+    }
+
+    .goal {
+        background: url(./images/banner.jpg) no-repeat center;
+        height: 98vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .work {
+        color: #10b5fa;
+        z-index: 10;
+        position: absolute;
+        right: 20px;
+        top: 50px;
+        font-size: 30px;
+        color: rgba(255, 255, 255, 0.7);
+        border-bottom: 2px solid #333;
+        text-decoration: none;
+    }
+
+    .p-c {
+        color: #b031d9;
+        font-size: 60px;
+        text-align: center;
+    }
+</style>
+
+<body style="display: flex">
+<div class="sidebar">
+    <div class="menu"><a href="#GOAL">GOAL</a></div>
+    <div class="menu"><a href="#Research">Problem & Research</a></div>
+    <div class="menu"><a href="#Testing">Design Iterations</a></div>
+    <div class="menu"><a href="#Testing">User Testing</a></div>
+    <div class="menu"><a href="#Remote">Remote User Testing Service</a></div>
+    <div class="menu"><a href="#Conclusion">Conclusion</a></div>
+</div>
+<div style="flex: 1;">
+    <div class="goal" id="GOAL">
+        <a class="work" href="../../index.html" target="_blank">Work</a>
+        <div class="block1">
+            <h1 class="p-c">Goal</h1>
+            <p>
+                We worked in a group to design an interactive interface for an emerging start-up.
+                For the start-up that we chose,
+                <a href="https://www.ycombinator.com/companies/wolfia" target="_blank">Wolfia</a>,
+                it was founded by Fabien
+                Devos and Naren Manoharan in 2022. The problem they were trying to solve was
+                getting feedback to mobile app developers more efficiently and effectively through
+                a shared link. Their model included feedback from Product Managers, Designers, and
+                other Developers.
+            </p>
         </div>
-        <div class="col-lg-10 scrollspy-example pr-0" data-spy="scroll" data-target="#spy">
-            <div class="w3ls-banner d-flex  align-items-center justify-content-center" id="Goal">
-                <header class="probootstrap-header" style="position: absolute; top: 130px; left: 58%;">
-                    <nav class="probootsrap-nav">
-                        <ul>
-                            <li class="active"><a href="../../index.html">Work</a></li>
-                        </ul>
-                    </nav>
-                </header>
-                <div class="bnr-w3pvt text-center">
-                    <h2 class="bnr-txt-w3">Goal</h2>
-                    <p style="width:80%; margin:0 10%;">
-                        We worked in a group to design an interactive interface for an emerging start-up.
-                        For the start-up that we chose,
-                        <a href="javascript:void(0)"
-                           onclick="window.open('https://www.ycombinator.com/companies/wolfia')">Wolfia</a>,
-                        it was founded by Fabien
-                        Devos and Naren Manoharan in 2022. The problem they were trying to solve was
-                        getting feedback to mobile app developers more efficiently and effectively through
-                        a shared link. Their model included feedback from Product Managers, Designers, and
-                        other Developers.
-                    </p>
-                </div>
+
+    </div>
+
+    <div class="block1" id="Research" style="margin:50px 40px 40px 40px;position: relative;padding: 30px;">
+        <h1 class="caption">Problem & Research</h1>
+        <div style="margin-top: 50px;">
+            <p>We decided the best way to achieve the goal of getting feedback
+                through a shared link was through a web app with multiple “sides”.
+            </p>
+            <p>
+                -On the “Developer” side, developers would be able to upload their mobile
+                apps and generate a link to send to various users for testing and feedback.
+                They could also access a Feedback studio to ask for specific feedback and
+                also see the feedback they have been given.
+            </p>
+            <p>
+                -On the “Reviewer” side, users would be able to use a variety of tools
+                (code and non-code) to leave feedback on the app.
+            </p>
+            <p>
+                We generated ideas for our design by creating quick sketches exploring
+                various possibilities for the website's interfaces. We focused on the
+                pages enabling users to upload an app, view feedback on their app, and
+                leave feedback on apps created by others.
+            </p>
+        </div>
+    </div>
+    <div class="block1" id="Testing" style="height: auto;padding: 20px;font-weight: bold;">
+        <div style="color: #fff;font-size: 25px;font-weight: normal;">Design Iterations</div>
+        <h3>Lo-Fi Prototyping</h3>
+        <h4>Upload App Screen Sketches</h4>
+        <p style="color: #fff;font-size: 20px;font-weight: normal;">
+            This is the screen where users will upload a .apk file to share
+            others
+        </p>
+        <div style="display: flex;justify-content: space-between;">
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img1.png" style="width: 100%;"/>
             </div>
-
-            <div class="py-lg-5 py-4" id="Problem">
-                <div class="container">
-                    <div class="banner-bottom about-w3ls py-lg-5">
-                        <div class="row py-lg-5">
-                            <div class="col-lg-5 w3pvt-head">
-                                <span class="w3-line"></span>
-                                <h3 class="agile-title d-inline">Problem & Research</h3>
-                            </div>
-                            <div class="col-lg-7 mt-lg-0 mt-3">
-                                <p>We decided the best way to achieve the goal of getting feedback
-                                    through a shared link was through a web app with multiple “sides”.
-                                </p>
-                                <p>
-                                    -On the “Developer” side, developers would be able to upload their mobile
-                                    apps and generate a link to send to various users for testing and feedback.
-                                    They could also access a Feedback studio to ask for specific feedback and
-                                    also see the feedback they have been given.
-                                </p>
-                                <p>
-                                    -On the “Reviewer” side, users would be able to use a variety of tools
-                                    (code and non-code) to leave feedback on the app.
-                                </p>
-                                <p>
-                                    We generated ideas for our design by creating quick sketches exploring
-                                    various possibilities for the website's interfaces. We focused on the
-                                    pages enabling users to upload an app, view feedback on their app, and
-                                    leave feedback on apps created by others.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img2.png" style="width: 100%;"/>
             </div>
-
-            <div id="services">
-                <div class="container py-lg-5 py-4">
-                    <div class="row py-sm-5 pt-3 pb-4">
-                        <div class="col-lg-5 w3pvt-head">
-                            <span class="w3-line"></span>
-                            <h3 class="agile-title d-inline">Design Iterations</h3>
-                        </div>
-                    </div>
-                    <div class="mt-lg-5 mt-3">
-                        <h3>Lo-Fi Prototyping</h3>
-                        <br>
-                        <h4>Upload App Screen Sketches</h4>
-                        <p class="text-white slide-txt">This is the screen where users will upload a .apk file to share
-                            others</p>
-                    </div>
-                    <div class="row mb-lg-5 pt-md-5">
-                        <div class="row services-top">
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img1.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img2.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img3.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img4.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-lg-5 mt-3">
-                        <h4>View Feedback Screen Sketches</h4>
-                        <p class="text-white slide-txt">This is the page where a user can see the feedback that was left
-                            on their uploaded app</p>
-                    </div>
-                    <div class="row mb-lg-5 pt-md-5">
-                        <div class="row services-top">
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img5.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img6.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img7.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img8.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-lg-5 mt-3">
-                        <h4>Leaving Feedback Screen Sketches</h4>
-                        <p class="text-white slide-txt">This is the page where a user can view and leave feedback on an
-                            app
-                            another user has sent them</p>
-                    </div>
-                    <div class="row mb-lg-5 pt-md-5">
-                        <div class="row services-top">
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img9.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img10.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img11.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img12.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-lg-5 mt-3">
-                        <h3>Hi-Fi Prototyping</h3>
-                        <p class="text-white slide-txt">
-                            In order to make our design closer to a real finished product, we designed hi-fi prototypes
-                            with Figma based on lo-fi sketches. In this process, as UI/UX designers, we mainly focus on
-                            the following 3 angles: interaction, navigation and hierarchy.
-                        </p>
-                        <ul class="text-white slide-txt">
-                            <li>
-                                (1) Interaction: To increase interaction, we incorporate lots of icons
-                                (that were both learnable and actionable) into our feedback studio. Additionally,
-                                based on Jacob Nielsen’s Rule of Thumb, we focused on three things to maximize
-                                interaction: consistency and standards, match between system and real world
-                                (or user’s mental models), and user control and freedom. Consistency and
-                                standards led us to minimize the colors we were using and also make sure that
-                                we included similar language, formatting, and features on various pages. For
-                                the match between system and real world, we tried to incorporate aspects of
-                                common applications (eg. drag and drop to upload), and think about what
-                                information a new user might need. Lastly, for user control and freedom,
-                                we wanted to make both the Reviewer Feedback and Developer Feedback as
-                                customizable and flexible as possible.
-                            </li>
-                            <br>
-                            <li>
-                                (2) Navigation: We decided to use a side navigation bar. We also tried to group
-                                by topic (Project vs. Feedback on the sidebar) so that developers could easily find
-                                what they were looking for. We tried to test to make sure that users knew where they
-                                were and could hopefully figure out where they might want to go next.
-                            </li>
-                            <br>
-                            <li>
-                                (3) Hierarchy: Used headings, different font weights, and indentation to show the
-                                hierarchy of different pages.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row mb-lg-5 pt-md-5">
-                        <div class="row services-top">
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center"
-                                 style="margin: auto auto auto 0px">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img13.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center"
-                                 style="margin: auto auto auto 0px">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img14.png"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-4 service_grid text-center"
-                                 style="margin: auto auto auto 0px">
-                                <div class="serviceinfo_agile ih-item circle colored effect17">
-                                    <div class="img"><img alt="img" class="img-fluid" src="images/img15.png"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img3.png" style="width: 100%;"/>
             </div>
-
-            <div id="User">
-                <div class="services_agile py-lg-5 py-4">
-                    <div class="container py-md-5">
-                        <div class="row py-lg-5">
-                            <div class="col-lg-5 w3pvt-head">
-                                <span class="w3-line"></span>
-                                <h3 class="agile-title d-inline">User Testing</h3>
-
-                            </div>
-                            <div class="col-lg-7 mt-lg-0 mt-3">
-                                <h4>Peer Critique</h4>
-                                <p>We had a mockup critique and we were able to receive feedback
-                                    from our peers. During a critique session, our peers pointed out
-                                    some places, such as the hierarchy of the navigation bar and the
-                                    consistency of buttons, where we could improve hierarchy and accessibility
-                                    for users and developers alike. Our group refined our hi-fi prototypes
-                                    with the following feedback.</p>
-                            </div>
-                        </div>
-                        <div class="row services-top">
-                            <div class="col-md-12">
-                                <table class="table table-striped table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th>Critique</th>
-                                        <th>Our Solution</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>“Log in” or “Log In” buttons were inconsistent in their capitalization.</td>
-                                        <td>Buttons made consistent throughout the login page and also throughout the
-                                            entire prototype (standardized button size, font, and color).
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Side navigation bar could have a better hierarchy.</td>
-                                        <td>Improved the hierarchy in the side navigation bar through the use of font
-                                            size, font weight, and indentation.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>“New Feedback” and “Recent Feedback” on the hub page seemed too similar.
-                                            Reconsider the headings and the organization of this page.
-                                        </td>
-                                        <td>Changed “Recent Feedback” to “All Feedback” to remove ambiguity. Thought
-                                            through the most important shortcuts.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>(Peers were presented with several different color/contrast options for the
-                                            Feedback page) For the Feedback page, pick the option with the dark
-                                            background, and light icons with white space.
-                                        </td>
-                                        <td>Implemented the high-contrast option, used consistent icons across pages to
-                                            remove ambiguity.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Incorporate live analytics for specific questions ( flesh out the Dev
-                                            Question Studio a little bit more).
-                                        </td>
-                                        <td>Made a new screen to show the question studio, which allows developers to
-                                            see existing responses to each question.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>On the upload/App pages, show buttons more clearly (especially the customize
-                                            feedback button) through colors or joining them in one bar.
-                                        </td>
-                                        <td>Button colors and locations were modified to make their purpose more clear,
-                                            linked related buttons by placing the functions related to sharing in the
-                                            same container.
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img4.png" style="width: 100%;"/>
             </div>
-
-            <div id="explore">
-                <div class="explore-sec py-5">
-                    <div class="container pt-lg-5">
-                        <div class="w3pvt-head">
-                            <span class="w3-line"></span>
-                            <h3 class="agile-title d-inline text-white">Remote User Testing Service</h3>
-                            <div class="mt-lg-5 mt-3">
-                                <p class="text-white slide-txt">
-                                    Here is our refined <a href="javascript:void(0)"
-                                                           onclick="window.open('https://www.figma.com/proto/VkiK4R5BviorJ188MwTBPZ/Wolfia-Iterative-Design?page-id=0%3A1&node-%20%20%20%20%20%20%20%20%20%20id=27%3A4&viewport=309%2C268%2C0.13&scaling=min-zoom&starting-point-node-id=27%3A4')">Figma
-                                    prototype link</a> based on peer’s feedback.
-                                </p>
-                                <h4>Usability Test Question & Summary</h4>
-                            </div>
-                        </div>
-                        <div class="row py-sm-5 mt-sm-0 mt-4">
-                            <div class="col-lg-4 col-sm-6 flex-wrap  border-right p-0 slide-sec">
-                                <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
-                                    <div class="wthree-list-desc">
-                                        <div class="serviceinfo_agile ih-item circle colored effect17">
-                                            <video controls height="180px" width="100%">
-                                                <source src="images/User1.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <h5 class="text-white" style="text-align: center;">User1</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex-wrap col-lg-4 col-sm-6 border-right p-0 slide-sec">
-                                <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
-                                    <div class="wthree-list-desc">
-                                        <div class="serviceinfo_agile ih-item circle colored effect17">
-                                            <video controls height="180px" width="100%">
-                                                <source src="images/User2.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <h5 class="text-white" style="text-align: center;">User2</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wthree-list-grid flex-wrap col-lg-4 col-sm-6 border-right p-0 slide-sec">
-                                <div class="d-flex  align-items-center justify-content-center wthree-list-grid">
-                                    <div class="wthree-list-desc">
-                                        <div class="serviceinfo_agile ih-item circle colored effect17">
-                                            <video controls height="180px" width="100%">
-                                                <source src="images/User3.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                        <h5 class="text-white" style="text-align: center;">User3</h5>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12">
-                                <table class="table table-striped table-hover">
-                                    <thead>
-                                    <tr>
-                                        <th>Question</th>
-                                        <th>Summary</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Step 1: Log in to the site. Find feedback for App 1 and verbally confirm how
-                                            many bugs were found.
-                                        </td>
-                                        <td>User 1, unfortunately ended up on the “User” side of the interface as
-                                            opposed to the “Developer” side and could not complete the task.
-                                            <br>Users 2 and 3 found this task very straightforward. They used different
-                                            parts of the site to get to the feedback page (side nav vs. icon on hub
-                                            page) which shows that the redundancy is useful.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Step 2: Were you able to complete the task?</td>
-                                        <td>User 1 said: No, she was confused by the task. <br>Users 2 and 3 completed
-                                            this task, and felt confident they had completed it correctly.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Step 3: How easy was it to complete the task? (1-very hard, 5-very easy)
-                                        </td>
-                                        <td>User 1 said 3, she found the task to be vague. <br>Users 2 and 3 said 5.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Step 4: Navigate to the App1 project and customize its feedback. What was
-                                            the most common response to the question “How would you rate this app?”
-                                        </td>
-                                        <td>User 1 was able to go back to the log-in page, then find the customize
-                                            feedback button and see the Dev Question Studio. Users 2 went back to the
-                                            Project page (using the side nav) for App1 and easily found the customize
-                                            feedback button.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Step 5: Were you able to complete the task?</td>
-                                        <td>All 3 Users completed this task, and felt confident they had completed it
-                                            correctly.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Step 6: How easy was it to complete the task? (1-very hard, 5-very easy)
-                                        </td>
-                                        <td>User 1 said 4.<br>Users 2 and 3 said 5.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Step 7: Edit the “How would you rate this app?” question. Adjust the
-                                            settings to make this question not required and confirm your changes.
-                                        </td>
-                                        <td>All three users found the “Edit Question” button very quickly and were able
-                                            to uncheck “Required Question” and confirm their changes.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Step 8: Were you able to complete the task?</td>
-                                        <td>All 3 Users completed this task, and felt confident they had completed it
-                                            correctly.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>How easy was it to complete the task? (1-very hard, 5-very easy)</td>
-                                        <td>All 3 Users rated this task 5, very easy.</td>
-                                    </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="w3pvt-head">
-                                <span class="w3-line"></span>
-                                <h3 class="agile-title d-inline text-white">Suggestions</h3>
-                                <div class="mt-lg-5 mt-3">
-                                    <p class="text-white slide-txt">
-                                        -<b>User 1:</b> “The left-hand menu could be clearer. I was able to find things
-                                        using the general layout of the design (which helps a user find their way). The
-                                        interface is designed well enough for the average person to figure out, but it
-                                        took me a while.” <br>
-                                        -<b>User 2:</b> Did not leave additional feedback. <br>
-                                        -<b>User 3:</b> “I think [the interface] is laid out very well. Even though
-                                        there is not a lot of color in the site, I still like it. It was still very easy
-                                        [to navigate] on the left hand side. I like the layout and it just helped things
-                                        flow well.” User 3: “It might be nice that once you have edited, something pops
-                                        up like ‘changes saved’ so that you are assured that it does go through, no
-                                        glitches, and it reads what you did... Because sometimes technology happens.
-                                        That might be nice to have there”
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="w3pvt-head">
-                                <span class="w3-line"></span>
-                                <h3 class="agile-title d-inline text-white">Analysis</h3>
-                                <div class="mt-lg-5 mt-3">
-                                    <p class="text-white slide-txt">
-                                        For the first task, finding feedback for App 1, two of the users found the task
-                                        to be straightforward and very easy, while the third user struggled to navigate
-                                        the site after getting caught on the “Reviewer” side of the interface as opposed
-                                        to the “Developer” side. For the second and third tasks, all three of the users
-                                        found the tasks to be straightforward and were able to complete them in a timely
-                                        manner.
-                                    </p>
-                                    <p class="text-white slide-txt">
-                                        Based on user feedback, we would incorporate more action validation into the
-                                        interface to keep users informed – this aligns with the interaction principle of
-                                        visibility of system status. For example, we could incorporate pop-up windows,
-                                        informative messages, or progress bars to show the user if their desired action
-                                        has been completed. Additionally, we would increase the separation between the
-                                        Reviewer and Developer sides of our prototype and the site itself by having the
-                                        user link pop up in a new browser window. This would address the interaction
-                                        principle of error prevention. We could also potentially add more color to the
-                                        website to increase visual interest.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <h4>View Feedback Screen Sketches</h4>
+        <p style="color: #fff">This is the page where a user can see the feedback that was left
+            on their uploaded app</p>
+        <div style="display: flex;justify-content: space-between;">
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img5.png" style="width: 100%;"/>
             </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img6.png" style="width: 100%;"/>
+            </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img7.png" style="width: 100%;"/>
+            </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img8.png" style="width: 100%;"/>
+            </div>
+        </div>
 
-            <div class="pt-lg-5" id="Conclusion">
-                <div class="container pt-5">
-                    <div class="row pt-lg-5">
-                        <div class="col-lg-5 w3pvt-head">
-                            <span class="w3-line"></span>
-                            <h3 class="agile-title d-inline">Conclusion</h3>
-                        </div>
-                        <div class="col-lg-7 mt-lg-0 mt-3">
-                            <p>
-                                I am very proud to design an enterprise-level interactive interface for a good start-up.
-                                Thanks a lot to all of my teammates for believing and supporting me throughout the whole
-                                process.
-                            </p>
-                            <p>
-                                Moreover, I also learned the importance of user testing. User testing is a core
-                                component of the UX design process, because only through effective testing can
-                                eliminate unforeseen problems and potential design mistakes in the design phase.
-                            </p>
-                            <p>
-                                Overall, it's a fascinating design, and if I have time, I think I'll try to actually
-                                implement our design.
-                            </p>
-                        </div>
-                    </div>
+        <h4>Leaving Feedback Screen Sketches</h4>
+        <p style="color: #fff">This is the page where a user can view and leave feedback on an
+            app
+            another user has sent them</p>
+        <div style="display: flex;justify-content: space-between;">
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img9.png" style="width: 100%;"/>
+            </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img10.png" style="width: 100%;"/>
+            </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img11.png" style="width: 100%;"/>
+            </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img12.png" style="width: 100%;"/>
+            </div>
+        </div>
+        <h3>Hi-Fi Prototyping</h3>
+        <p style="color: #fff;font-size: 20px;font-weight: normal;">
+            In order to make our design closer to a real finished product, we designed hi-fi prototypes
+            with Figma based on lo-fi sketches. In this process, as UI/UX designers, we mainly focus on
+            the following 3 angles: interaction, navigation and hierarchy.
+        </p>
+        <p style="color: #fff;font-size: 20px;font-weight: normal;">
+            (1) Interaction: To increase interaction, we incorporate lots of icons
+            (that were both learnable and actionable) into our feedback studio. Additionally,
+            based on Jacob Nielsen’s Rule of Thumb, we focused on three things to maximize
+            interaction: consistency and standards, match between system and real world
+            (or user’s mental models), and user control and freedom. Consistency and
+            standards led us to minimize the colors we were using and also make sure that
+            we included similar language, formatting, and features on various pages. For
+            the match between system and real world, we tried to incorporate aspects of
+            common applications (eg. drag and drop to upload), and think about what
+            information a new user might need. Lastly, for user control and freedom,
+            we wanted to make both the Reviewer Feedback and Developer Feedback as
+            customizable and flexible as possible.
+        </p>
 
-                </div>
-                <div class="section">
-                    <!-- footer -->
-                    <div class="footer-bottom py-lg-5 py-3">
-                        <div class="footer-copy text-center">
-                            <p class="text-dark">Copyright &copy; 2022.</p>
-                        </div>
-                    </div>
-                </div>
+        <p style="color: #fff;font-size: 20px;font-weight: normal;">
+            (2) Navigation: We decided to use a side navigation bar. We also tried to group
+            by topic (Project vs. Feedback on the sidebar) so that developers could easily find
+            what they were looking for. We tried to test to make sure that users knew where they
+            were and could hopefully figure out where they might want to go next.
+        </p>
+
+        <p style="color: #fff;font-size: 20px;font-weight: normal;">
+            (3) Hierarchy: Used headings, different font weights, and indentation to show the
+            hierarchy of different pages.
+        </p>
+
+        <div style="display: flex;justify-content: space-between;">
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img13.png" style="width: 100%;"/>
+            </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img14.png" style="width: 100%;"/>
+            </div>
+            <div style="border: 10px solid #fff;width: 20%;box-sizing: border-box;">
+                <img src="images/img15.png" style="width: 100%;"/>
             </div>
         </div>
     </div>
+    <div id="Testing" style="margin-top: 50px;padding: 20px;font-weight: bold;">
+        <h1 class="caption">User Testing</h1>
+    </div>
+
+    <div style="font-size: 20px;background-color:#fff;margin-top: 50px;padding: 20px;">
+        <h4>Peer Critique</h4>
+        <p>
+            We had a mockup critique and we were able to receive feedback
+            from our peers. During a critique session, our peers pointed out
+            some places, such as the hierarchy of the navigation bar and the
+            consistency of buttons, where we could improve hierarchy and accessibility
+            for users and developers alike. Our group refined our hi-fi prototypes
+            with the following feedback.
+        </p>
+    </div>
+    <table>
+        <tr>
+            <th>Critique</th>
+            <th>Our Solution</th>
+        </tr>
+        <tbody>
+        <tr>
+            <td>“Log in” or “Log In” buttons were inconsistent in their capitalization.</td>
+            <td>Buttons made consistent throughout the login page and also throughout the
+                entire prototype (standardized button size, font, and color).
+            </td>
+        </tr>
+        <tr>
+            <td>Side navigation bar could have a better hierarchy.</td>
+            <td>Improved the hierarchy in the side navigation bar through the use of font
+                size, font weight, and indentation.
+            </td>
+        </tr>
+        <tr>
+            <td>“New Feedback” and “Recent Feedback” on the hub page seemed too similar.
+                Reconsider the headings and the organization of this page.
+            </td>
+            <td>Changed “Recent Feedback” to “All Feedback” to remove ambiguity. Thought
+                through the most important shortcuts.
+            </td>
+        </tr>
+        <tr>
+            <td>(Peers were presented with several different color/contrast options for the
+                Feedback page) For the Feedback page, pick the option with the dark
+                background, and light icons with white space.
+            </td>
+            <td>Implemented the high-contrast option, used consistent icons across pages to
+                remove ambiguity.
+            </td>
+        </tr>
+        <tr>
+            <td>Incorporate live analytics for specific questions ( flesh out the Dev
+                Question Studio a little bit more).
+            </td>
+            <td>Made a new screen to show the question studio, which allows developers to
+                see existing responses to each question.
+            </td>
+        </tr>
+        <tr>
+            <td>On the upload/App pages, show buttons more clearly (especially the customize
+                feedback button) through colors or joining them in one bar.
+            </td>
+            <td>Button colors and locations were modified to make their purpose more clear,
+                linked related buttons by placing the functions related to sharing in the
+                same container.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div id="Remote" style="margin-top: 50px;padding: 20px;font-weight: bold;">
+        <h1 class="caption">Remote User Testing Service</h1>
+        <p>
+            Here is our refined <a
+                href="https://www.figma.com/proto/VkiK4R5BviorJ188MwTBPZ/Wolfia-Iterative-Design?page-id=0%3A1&amp;node-%20%20%20%20%20%20%20%20%20%20id=27%3A4&amp;viewport=309%2C268%2C0.13&amp;scaling=min-zoom&amp;starting-point-node-id=27%3A4"
+                target="_blank">Figma
+            prototype link</a> based on peer’s feedback.
+        </p>
+        <h4>Usability Test Question &amp; Summary</h4>
+    </div>
+    <div style="display: flex;justify-content: space-between;">
+        <div style="border: 10px solid #fff;width: 30%;box-sizing: border-box;">
+            <video controls="" style="width: 100%;">
+                <source src="./images/User1.mp4" type="video/mp4">
+            </video>
+            <div>User1</div>
+        </div>
+        <div style="border: 10px solid #fff;width: 30%;box-sizing: border-box;">
+            <video controls="" style="width: 100%;">
+                <source src="./images/User2.mp4" type="video/mp4">
+            </video>
+            <div>User1</div>
+        </div>
+        <div style="border: 10px solid #fff;width: 30%;box-sizing: border-box;">
+            <video controls="" style="width: 100%;">
+                <source src="./images/User3.mp4" type="video/mp4">
+            </video>
+            <div>User1</div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Question</th>
+            <th>Summary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Step 1: Log in to the site. Find feedback for App 1 and verbally confirm how
+                many bugs were found.
+            </td>
+            <td>User 1, unfortunately ended up on the “User” side of the interface as
+                opposed to the “Developer” side and could not complete the task.
+                <br>Users 2 and 3 found this task very straightforward. They used different
+                parts of the site to get to the feedback page (side nav vs. icon on hub
+                page) which shows that the redundancy is useful.
+            </td>
+        </tr>
+        <tr>
+            <td>Step 2: Were you able to complete the task?</td>
+            <td>User 1 said: No, she was confused by the task. <br>Users 2 and 3 completed
+                this task, and felt confident they had completed it correctly.
+            </td>
+        </tr>
+        <tr>
+            <td>Step 3: How easy was it to complete the task? (1-very hard, 5-very easy)
+            </td>
+            <td>User 1 said 3, she found the task to be vague. <br>Users 2 and 3 said 5.
+            </td>
+        </tr>
+        <tr>
+            <td>Step 4: Navigate to the App1 project and customize its feedback. What was
+                the most common response to the question “How would you rate this app?”
+            </td>
+            <td>User 1 was able to go back to the log-in page, then find the customize
+                feedback button and see the Dev Question Studio. Users 2 went back to the
+                Project page (using the side nav) for App1 and easily found the customize
+                feedback button.
+            </td>
+        </tr>
+        <tr>
+            <td>Step 5: Were you able to complete the task?</td>
+            <td>All 3 Users completed this task, and felt confident they had completed it
+                correctly.
+            </td>
+        </tr>
+        <tr>
+            <td>Step 6: How easy was it to complete the task? (1-very hard, 5-very easy)
+            </td>
+            <td>User 1 said 4.<br>Users 2 and 3 said 5.</td>
+        </tr>
+        <tr>
+            <td>Step 7: Edit the “How would you rate this app?” question. Adjust the
+                settings to make this question not required and confirm your changes.
+            </td>
+            <td>All three users found the “Edit Question” button very quickly and were able
+                to uncheck “Required Question” and confirm their changes.
+            </td>
+        </tr>
+        <tr>
+            <td>Step 8: Were you able to complete the task?</td>
+            <td>All 3 Users completed this task, and felt confident they had completed it
+                correctly.
+            </td>
+        </tr>
+        <tr>
+            <td>How easy was it to complete the task? (1-very hard, 5-very easy)</td>
+            <td>All 3 Users rated this task 5, very easy.</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+    <div style="margin-top: 50px;padding: 20px;font-weight: bold;">
+        <h1 class="caption">Suggestions</h1>
+        <p>
+            -<b>User 1:</b> “The left-hand menu could be clearer. I was able to find things
+            using the general layout of the design (which helps a user find their way). The
+            interface is designed well enough for the average person to figure out, but it
+            took me a while.” <br>
+            -<b>User 2:</b> Did not leave additional feedback. <br>
+            -<b>User 3:</b> “I think [the interface] is laid out very well. Even though
+            there is not a lot of color in the site, I still like it. It was still very easy
+            [to navigate] on the left hand side. I like the layout and it just helped things
+            flow well.” User 3: “It might be nice that once you have edited, something pops
+            up like ‘changes saved’ so that you are assured that it does go through, no
+            glitches, and it reads what you did... Because sometimes technology happens.
+            That might be nice to have there”
+        </p>
+        <h4>Usability Test Question &amp; Summary</h4>
+    </div>
+    <div style="margin-top: 50px;padding: 20px;font-weight: bold;">
+        <h1 class="caption">Analysis</h1>
+        <div>
+            <p>
+                For the first task, finding feedback for App 1, two of the users found the task
+                to be straightforward and very easy, while the third user struggled to navigate
+                the site after getting caught on the “Reviewer” side of the interface as opposed
+                to the “Developer” side. For the second and third tasks, all three of the users
+                found the tasks to be straightforward and were able to complete them in a timely
+                manner.
+            </p>
+            <p>
+                Based on user feedback, we would incorporate more action validation into the
+                interface to keep users informed – this aligns with the interaction principle of
+                visibility of system status. For example, we could incorporate pop-up windows,
+                informative messages, or progress bars to show the user if their desired action
+                has been completed. Additionally, we would increase the separation between the
+                Reviewer and Developer sides of our prototype and the site itself by having the
+                user link pop up in a new browser window. This would address the interaction
+                principle of error prevention. We could also potentially add more color to the
+                website to increase visual interest.
+            </p>
+        </div>
+    </div>
+    <div id="Conclusion" style="margin-top: 50px;padding: 20px;font-weight: bold;">
+        <h1 class="caption">Conclusion</h1>
+        <div>
+            <p>
+                I am very proud to design an enterprise-level interactive interface for a good start-up.
+                Thanks a lot to all of my teammates for believing and supporting me throughout the whole
+                process.
+            </p>
+            <p>
+                Moreover, I also learned the importance of user testing. User testing is a core
+                component of the UX design process, because only through effective testing can
+                eliminate unforeseen problems and potential design mistakes in the design phase.
+            </p>
+            <p>
+                Overall, it's a fascinating design, and if I have time, I think I'll try to actually
+                implement our design.
+            </p>
+        </div>
+    </div>
+    <div class="footer">
+        @2022
+    </div>
 </div>
-
-<!-- js -->
-<script src="js/jquery-2.2.3.min.js"></script>
-<script src="js/move-top.js"></script>
-<script src="js/easing.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/SmoothScroll.min.js"></script>
-<script>
-
-    addEventListener("load", function () {
-        setTimeout(hideURLbar, 0);
-    }, false);
-
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    }
-
-    jQuery(document).ready(function ($) {
-        $(".scroll").click(function (event) {
-            event.preventDefault();
-
-            $('html,body').animate({
-                scrollTop: $(this.hash).offset().top
-            }, 1000);
-        });
-    });
-
-    $(document).ready(function () {
-        $().UItoTop({
-            easingType: 'easeOutQuart'
-        });
-
-    });
-
-</script>
 </body>
 
 </html>
